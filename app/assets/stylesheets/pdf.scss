@@ -1,0 +1,32 @@
+.comment{
+  border: 1px solid black;
+  border-radius: 8px
+}
+
+.title-wrapper{
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center
+}
+
+.post{
+  border-top: 2px solid black;
+  padding: 15px 0
+}
+
+.comments-wrapper{
+  border-top: 2px solid black;
+  padding-top: 10px
+}
+
+header{
+  border-bottom: 1px solid #eee;
+}
+
+.container{
+  padding: 15px 0;
+}

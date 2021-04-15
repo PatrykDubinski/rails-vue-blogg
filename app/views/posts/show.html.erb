@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center">
+    <h2 class="title mt-2"><%= @post.title %></h2>
+    <p class="font-italic">by <%= @post.user.email %></p>
+  </div>
+  <hr>
+  <p class="subtitle"><%= @post.body %></p>
+  <hr>
+  <div class="hero my-3">
+    <h4>Comments</h4>
+    <%= render "comments/comment", collection: @post %>
+  </div>
+  <hr>
+  <div class="hero my-3">
+    <h4>Add a comment</h4>
+    <%= render "comments/form" %>
+  </div>
+
+  <%= link_to 'Edit', edit_admin_post_path(@post), class: "btn btn-primary" %>
+  <%= link_to 'Back', posts_path, class: "btn btn-secondary" %>
+  <%= link_to "Generate PDF", post_path(@post, :format => :pdf) %>
+</div>

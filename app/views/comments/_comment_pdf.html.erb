@@ -1,0 +1,9 @@
+<% @post.comments.each do |com| %>
+  <div class="comment">
+    <div class="card-body">
+      <p class="card-text"><strong><%= com.user.email %></strong>: <%= com.body %></p>
+    </div>
+  </div>
+
+  <p class="text-right font-italic">Created: <%= time_ago_in_words(com.created_at) %> ago</p>
+<% end %>

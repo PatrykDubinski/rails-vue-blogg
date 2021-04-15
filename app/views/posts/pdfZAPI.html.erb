@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="title-wrapper" style="">
+    <h2 class="title mt-2"><%= post.title %></h2>
+  </div>
+  <p class="subtitle post"><%= post.body %></p>
+  <div class="hero my-3 comments-wrapper">
+    <h4>Comments</h4>
+    <%= render "comments/comment_pdfZAPI", comments: post.comments %>
+  </div>
+</div>

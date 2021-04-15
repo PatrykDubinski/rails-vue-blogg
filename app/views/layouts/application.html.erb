@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ZadanieBlog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= wicked_pdf_stylesheet_link_tag "pdf.css" -%>
+    <%= wicked_pdf_stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render "layouts/header" %>
+
+    <% if notice %>
+      <div class="alert alert-warning" role="alert">
+        <%= notice %>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-danger" role="alert">
+        <%= alert %>
+      </div>
+    <% end %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
